@@ -42,25 +42,5 @@ namespace DB_Project
             return connection;
         }
     }
-    /*
-    public class Role: db
-    {
-        db a = new db();
-        MySqlDataAdapter b = new MySqlDataAdapter();
-        DataSet1 DataSet1 = new DataSet1();
-        DataSet1.рольDataTable DataTable1 = new DataSet1.рольDataTable();
-        List<string> list = new List<string>();
-        public void OpenConnection()
-        {
-            MySqlCommand command1 = new MySqlCommand("SELECT * FROM `роль`", a.getConnection());
-            b.SelectCommand = command1;
-            b.Fill(DataTable1);
-
-            for (int i = 0; i < DataTable1.Rows.Count; i++)
-            {
-                list.Add(DataTable1.Rows[i]["id_роль"].ToString());
-            }
-        }
-    }
-    */
+    
 }

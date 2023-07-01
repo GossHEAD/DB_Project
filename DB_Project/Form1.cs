@@ -48,12 +48,17 @@ namespace DB_Project
         {
             
             string cmd = @"select * from Extractor";
+            string cmd1 = "SELECT Extractor.ID_Extractor, Extractor.Name, Manufacturer.Name as Manufacturer, Extractor_Subtype.Name as Type, \n" +
+                "Extractor.Price, Extractor.Information\n" +
+                "FROM Extractor\n" +
+                "JOIN Manufacturer ON Extractor.ID_Manufacturer = Manufacturer.ID_Manufacturer\n" +
+                "JOIN Extractor_Subtype ON Extractor.ID_Subtype = Extractor_Subtype.ID_Subtype";
             try
             {
                 using (var connection = new SQLiteConnection (db.getConnection()))
                 {
                     connection.Open();
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd, connection);
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd1, connection);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
                     dataGridView1.DataSource = dt;
@@ -311,7 +316,7 @@ namespace DB_Project
         }
 
         
-
+        //Кнопки админа
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             using(SpecialWindow sw = new SpecialWindow())
