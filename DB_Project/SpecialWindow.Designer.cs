@@ -42,7 +42,7 @@
             // button_OK
             // 
             this.button_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button_OK.Location = new System.Drawing.Point(12, 146);
+            this.button_OK.Location = new System.Drawing.Point(12, 223);
             this.button_OK.Name = "button_OK";
             this.button_OK.Size = new System.Drawing.Size(107, 60);
             this.button_OK.TabIndex = 5;
@@ -54,16 +54,16 @@
             this.comboBoxTypeAdd.FormattingEnabled = true;
             this.comboBoxTypeAdd.Location = new System.Drawing.Point(12, 67);
             this.comboBoxTypeAdd.Name = "comboBoxTypeAdd";
-            this.comboBoxTypeAdd.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTypeAdd.Size = new System.Drawing.Size(195, 24);
             this.comboBoxTypeAdd.TabIndex = 6;
             this.comboBoxTypeAdd.Text = "Тип";
             // 
             // comboBoxSybTypeAdd
             // 
             this.comboBoxSybTypeAdd.FormattingEnabled = true;
-            this.comboBoxSybTypeAdd.Location = new System.Drawing.Point(153, 67);
+            this.comboBoxSybTypeAdd.Location = new System.Drawing.Point(216, 64);
             this.comboBoxSybTypeAdd.Name = "comboBoxSybTypeAdd";
-            this.comboBoxSybTypeAdd.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxSybTypeAdd.Size = new System.Drawing.Size(198, 24);
             this.comboBoxSybTypeAdd.TabIndex = 7;
             this.comboBoxSybTypeAdd.Text = "Подтип";
             // 
@@ -80,13 +80,13 @@
             this.comboBoxPropEx.FormattingEnabled = true;
             this.comboBoxPropEx.Location = new System.Drawing.Point(12, 97);
             this.comboBoxPropEx.Name = "comboBoxPropEx";
-            this.comboBoxPropEx.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPropEx.Size = new System.Drawing.Size(195, 24);
             this.comboBoxPropEx.TabIndex = 9;
             this.comboBoxPropEx.Text = "Свойства";
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(139, 97);
+            this.richTextBox2.Location = new System.Drawing.Point(216, 94);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(198, 27);
             this.richTextBox2.TabIndex = 10;
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 219);
+            this.ClientSize = new System.Drawing.Size(426, 295);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.comboBoxPropEx);
             this.Controls.Add(this.textBoxNameAdd);
