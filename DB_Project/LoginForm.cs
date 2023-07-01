@@ -1,8 +1,10 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Data.Sqlite;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,42 +22,17 @@ namespace DB_Project
             InitializeComponent();
             this.passfield_password.Size = new Size(this.passfield_password.Width, 64);
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_login_Click(object sender, EventArgs e)
         {
-            String loginUser = passfield_login.Text;
-            String passUser = passfield_password.Text;
-            db db = new db();
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `пользователь` where `Логин` = @userLog AND `Пароль` = @userPass", db.getConnection());
-            command.Parameters.Add("@userLog", MySqlDbType.VarChar).Value = loginUser;
-            command.Parameters.Add("@userPass", MySqlDbType.VarChar).Value = passUser;
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-            if (table.Rows.Count > 0)
+            string loginUser = passfield_login.Text;
+            string passUser = passfield_password.Text;
+            
+            if (loginUser != null && passUser != null)
             {
                 this.Hide();
-                MySqlCommand command1 = new MySqlCommand("SELECT ID_Пользователь FROM `пользователь` where `Логин` = @userLog AND `Пароль` = @userPass", db.getConnection());
-                command1.Parameters.Add("@userLog", MySqlDbType.VarChar).Value = loginUser;
-                command1.Parameters.Add("@userPass", MySqlDbType.VarChar).Value = passUser;
-                adapter.SelectCommand = command1;
-                adapter.Fill(table);
-                role_id = (int)table.Rows[0]["ID_Пользователь"];
-                Form1 form1 = new Form1(role_id);
+                bool a = Autorization(loginUser, passUser);
+                //Form1 form1 = new Form1(role_id);
+                Form1 form1 = new Form1(a);
                 form1.Show();
             }          
                 
@@ -81,7 +58,14 @@ namespace DB_Project
         {
             lastPoint = new Point(e.X, e.Y);
         }
-    
-        
+
+        public bool Autorization(string username, string password)
+        {
+            if (username == "admin" && password == "admin")
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 }
