@@ -28,370 +28,344 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.traitsPanel = new System.Windows.Forms.Panel();
+            this.textBoxProp = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.photoPanel = new System.Windows.Forms.Panel();
+            this.pictureBoxExtractor = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.filterButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.adminPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonMaterial = new System.Windows.Forms.Button();
-            this.buttonStorage = new System.Windows.Forms.Button();
-            this.buttonOffs = new System.Windows.Forms.Button();
-            this.buttonStage = new System.Windows.Forms.Button();
-            this.buttonStocks = new System.Windows.Forms.Button();
-            this.buttonOrder = new System.Windows.Forms.Button();
-            this.buttonDeliveries = new System.Windows.Forms.Button();
-            this.buttonOutput = new System.Windows.Forms.Button();
-            this.buttonPath = new System.Windows.Forms.Button();
-            this.buttonTravel = new System.Windows.Forms.Button();
-            this.labelRole = new System.Windows.Forms.Label();
+            this.buttonExtractor = new System.Windows.Forms.Button();
+            this.buttonTraits = new System.Windows.Forms.Button();
+            this.buttonCreator = new System.Windows.Forms.Button();
+            this.buttonType = new System.Windows.Forms.Button();
+            this.buttonSubType = new System.Windows.Forms.Button();
+            this.buttonValue = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanelEverything = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelBoss = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonUpdateOrder = new System.Windows.Forms.Button();
-            this.panelStocks = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonTakeBaggage = new System.Windows.Forms.Button();
-            this.buttonSendBaggage = new System.Windows.Forms.Button();
-            this.panelLogist = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonAddPath = new System.Windows.Forms.Button();
-            this.buttonAddDeliver = new System.Windows.Forms.Button();
-            this.panelBuyer = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonCreateSupply = new System.Windows.Forms.Button();
-            this.panelSeller = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonCreateOrder = new System.Windows.Forms.Button();
+            this.textBoxInfo = new System.Windows.Forms.RichTextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.traitsPanel.SuspendLayout();
+            this.photoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExtractor)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            this.adminPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanelEverything.SuspendLayout();
-            this.panelBoss.SuspendLayout();
-            this.panelStocks.SuspendLayout();
-            this.panelLogist.SuspendLayout();
-            this.panelBuyer.SuspendLayout();
-            this.panelSeller.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(219, 110);
+            this.dataGridView1.Location = new System.Drawing.Point(215, 60);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 458);
+            this.dataGridView1.Size = new System.Drawing.Size(803, 210);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Описание";
+            // 
+            // traitsPanel
+            // 
+            this.traitsPanel.Controls.Add(this.textBoxProp);
+            this.traitsPanel.Controls.Add(this.label1);
+            this.traitsPanel.Location = new System.Drawing.Point(636, 279);
+            this.traitsPanel.Name = "traitsPanel";
+            this.traitsPanel.Size = new System.Drawing.Size(382, 206);
+            this.traitsPanel.TabIndex = 4;
+            // 
+            // textBoxProp
+            // 
+            this.textBoxProp.Location = new System.Drawing.Point(6, 26);
+            this.textBoxProp.Name = "textBoxProp";
+            this.textBoxProp.Size = new System.Drawing.Size(362, 162);
+            this.textBoxProp.TabIndex = 3;
+            this.textBoxProp.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Свойства";
+            // 
+            // photoPanel
+            // 
+            this.photoPanel.Controls.Add(this.pictureBoxExtractor);
+            this.photoPanel.Controls.Add(this.label2);
+            this.photoPanel.Location = new System.Drawing.Point(12, 34);
+            this.photoPanel.Name = "photoPanel";
+            this.photoPanel.Size = new System.Drawing.Size(197, 239);
+            this.photoPanel.TabIndex = 4;
+            // 
+            // pictureBoxExtractor
+            // 
+            this.pictureBoxExtractor.Location = new System.Drawing.Point(3, 26);
+            this.pictureBoxExtractor.Name = "pictureBoxExtractor";
+            this.pictureBoxExtractor.Size = new System.Drawing.Size(191, 210);
+            this.pictureBoxExtractor.TabIndex = 3;
+            this.pictureBoxExtractor.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Фото";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filterButton,
+            this.searchTextBox});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1182, 31);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // filterButton
+            // 
+            this.filterButton.Name = "filterButton";
+            this.filterButton.Size = new System.Drawing.Size(74, 27);
+            this.filterButton.Text = "Фильтр";
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(148, 27);
+            this.searchTextBox.Text = "Поиск по названию";
+            this.searchTextBox.Click += new System.EventHandler(this.searchTextBox_Click);
+            // 
+            // adminPanel
+            // 
+            this.adminPanel.Controls.Add(this.buttonUpdate);
+            this.adminPanel.Controls.Add(this.buttonAdd);
+            this.adminPanel.Controls.Add(this.buttonDelete);
+            this.adminPanel.Location = new System.Drawing.Point(12, 500);
+            this.adminPanel.Name = "adminPanel";
+            this.adminPanel.Size = new System.Drawing.Size(431, 55);
+            this.adminPanel.TabIndex = 6;
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Location = new System.Drawing.Point(3, 3);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(134, 43);
+            this.buttonUpdate.TabIndex = 1;
+            this.buttonUpdate.Text = "Обновить";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(143, 3);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(133, 43);
+            this.buttonAdd.TabIndex = 8;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(282, 3);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(133, 43);
+            this.buttonDelete.TabIndex = 9;
+            this.buttonDelete.Text = "Удалить";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.buttonMaterial);
-            this.flowLayoutPanel1.Controls.Add(this.buttonStorage);
-            this.flowLayoutPanel1.Controls.Add(this.buttonOffs);
-            this.flowLayoutPanel1.Controls.Add(this.buttonStage);
-            this.flowLayoutPanel1.Controls.Add(this.buttonStocks);
-            this.flowLayoutPanel1.Controls.Add(this.buttonOrder);
-            this.flowLayoutPanel1.Controls.Add(this.buttonDeliveries);
-            this.flowLayoutPanel1.Controls.Add(this.buttonOutput);
-            this.flowLayoutPanel1.Controls.Add(this.buttonPath);
-            this.flowLayoutPanel1.Controls.Add(this.buttonTravel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 36);
+            this.flowLayoutPanel1.Controls.Add(this.buttonExtractor);
+            this.flowLayoutPanel1.Controls.Add(this.buttonTraits);
+            this.flowLayoutPanel1.Controls.Add(this.buttonCreator);
+            this.flowLayoutPanel1.Controls.Add(this.buttonType);
+            this.flowLayoutPanel1.Controls.Add(this.buttonSubType);
+            this.flowLayoutPanel1.Controls.Add(this.buttonValue);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1023, 60);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 550);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(147, 302);
+            this.flowLayoutPanel1.TabIndex = 10;
             // 
-            // buttonMaterial
+            // buttonExtractor
             // 
-            this.buttonMaterial.Location = new System.Drawing.Point(3, 3);
-            this.buttonMaterial.Name = "buttonMaterial";
-            this.buttonMaterial.Size = new System.Drawing.Size(197, 46);
-            this.buttonMaterial.TabIndex = 1;
-            this.buttonMaterial.Text = "Материалы";
-            this.buttonMaterial.UseVisualStyleBackColor = true;
-            this.buttonMaterial.Click += new System.EventHandler(this.buttonMaterial_Click);
+            this.buttonExtractor.Location = new System.Drawing.Point(3, 3);
+            this.buttonExtractor.Name = "buttonExtractor";
+            this.buttonExtractor.Size = new System.Drawing.Size(134, 43);
+            this.buttonExtractor.TabIndex = 1;
+            this.buttonExtractor.Text = "Экстрактор";
+            this.buttonExtractor.UseVisualStyleBackColor = true;
+            this.buttonExtractor.Click += new System.EventHandler(this.buttonExtractor_Click);
             // 
-            // buttonStorage
+            // buttonTraits
             // 
-            this.buttonStorage.Location = new System.Drawing.Point(3, 55);
-            this.buttonStorage.Name = "buttonStorage";
-            this.buttonStorage.Size = new System.Drawing.Size(197, 46);
-            this.buttonStorage.TabIndex = 7;
-            this.buttonStorage.Text = "Склады";
-            this.buttonStorage.UseVisualStyleBackColor = true;
-            this.buttonStorage.Click += new System.EventHandler(this.buttonStorage_Click);
+            this.buttonTraits.Location = new System.Drawing.Point(3, 52);
+            this.buttonTraits.Name = "buttonTraits";
+            this.buttonTraits.Size = new System.Drawing.Size(133, 43);
+            this.buttonTraits.TabIndex = 8;
+            this.buttonTraits.Text = "Свойства";
+            this.buttonTraits.UseVisualStyleBackColor = true;
+            this.buttonTraits.Click += new System.EventHandler(this.buttonTrait_Click);
             // 
-            // buttonOffs
+            // buttonCreator
             // 
-            this.buttonOffs.Location = new System.Drawing.Point(3, 107);
-            this.buttonOffs.Name = "buttonOffs";
-            this.buttonOffs.Size = new System.Drawing.Size(197, 43);
-            this.buttonOffs.TabIndex = 8;
-            this.buttonOffs.Text = "Списание";
-            this.buttonOffs.UseVisualStyleBackColor = true;
-            this.buttonOffs.Click += new System.EventHandler(this.buttonOffs_Click);
+            this.buttonCreator.Location = new System.Drawing.Point(3, 101);
+            this.buttonCreator.Name = "buttonCreator";
+            this.buttonCreator.Size = new System.Drawing.Size(133, 43);
+            this.buttonCreator.TabIndex = 9;
+            this.buttonCreator.Text = "Производитель";
+            this.buttonCreator.UseVisualStyleBackColor = true;
+            this.buttonCreator.Click += new System.EventHandler(this.buttonCreator_Click);
             // 
-            // buttonStage
+            // buttonType
             // 
-            this.buttonStage.Location = new System.Drawing.Point(3, 156);
-            this.buttonStage.Name = "buttonStage";
-            this.buttonStage.Size = new System.Drawing.Size(197, 48);
-            this.buttonStage.TabIndex = 9;
-            this.buttonStage.Text = "Этап";
-            this.buttonStage.UseVisualStyleBackColor = true;
-            this.buttonStage.Click += new System.EventHandler(this.buttonStage_Click);
+            this.buttonType.Location = new System.Drawing.Point(3, 150);
+            this.buttonType.Name = "buttonType";
+            this.buttonType.Size = new System.Drawing.Size(133, 43);
+            this.buttonType.TabIndex = 10;
+            this.buttonType.Text = "Тип";
+            this.buttonType.UseVisualStyleBackColor = true;
+            this.buttonType.Click += new System.EventHandler(this.buttonType_Click);
             // 
-            // buttonStocks
+            // buttonSubType
             // 
-            this.buttonStocks.Location = new System.Drawing.Point(3, 210);
-            this.buttonStocks.Name = "buttonStocks";
-            this.buttonStocks.Size = new System.Drawing.Size(197, 48);
-            this.buttonStocks.TabIndex = 6;
-            this.buttonStocks.Text = "Запасы";
-            this.buttonStocks.UseVisualStyleBackColor = true;
-            this.buttonStocks.Click += new System.EventHandler(this.buttonStocks_Click);
+            this.buttonSubType.Location = new System.Drawing.Point(3, 199);
+            this.buttonSubType.Name = "buttonSubType";
+            this.buttonSubType.Size = new System.Drawing.Size(133, 43);
+            this.buttonSubType.TabIndex = 11;
+            this.buttonSubType.Text = "Подтип";
+            this.buttonSubType.UseVisualStyleBackColor = true;
+            this.buttonSubType.Click += new System.EventHandler(this.buttonSubType_Click);
             // 
-            // buttonOrder
+            // buttonValue
             // 
-            this.buttonOrder.Location = new System.Drawing.Point(3, 264);
-            this.buttonOrder.Name = "buttonOrder";
-            this.buttonOrder.Size = new System.Drawing.Size(197, 49);
-            this.buttonOrder.TabIndex = 4;
-            this.buttonOrder.Text = "Производство";
-            this.buttonOrder.UseVisualStyleBackColor = true;
-            this.buttonOrder.Click += new System.EventHandler(this.buttonOrder_Click);
-            // 
-            // buttonDeliveries
-            // 
-            this.buttonDeliveries.Location = new System.Drawing.Point(3, 319);
-            this.buttonDeliveries.Name = "buttonDeliveries";
-            this.buttonDeliveries.Size = new System.Drawing.Size(197, 50);
-            this.buttonDeliveries.TabIndex = 3;
-            this.buttonDeliveries.Text = "Поставки";
-            this.buttonDeliveries.UseVisualStyleBackColor = true;
-            this.buttonDeliveries.Click += new System.EventHandler(this.buttonDeliveries_Click);
-            // 
-            // buttonOutput
-            // 
-            this.buttonOutput.Location = new System.Drawing.Point(3, 375);
-            this.buttonOutput.Name = "buttonOutput";
-            this.buttonOutput.Size = new System.Drawing.Size(197, 53);
-            this.buttonOutput.TabIndex = 5;
-            this.buttonOutput.Text = "Выход_ГП";
-            this.buttonOutput.UseVisualStyleBackColor = true;
-            this.buttonOutput.Click += new System.EventHandler(this.buttonOutput_Click);
-            // 
-            // buttonPath
-            // 
-            this.buttonPath.Location = new System.Drawing.Point(3, 434);
-            this.buttonPath.Name = "buttonPath";
-            this.buttonPath.Size = new System.Drawing.Size(197, 44);
-            this.buttonPath.TabIndex = 0;
-            this.buttonPath.Text = "Маршрут";
-            this.buttonPath.UseVisualStyleBackColor = true;
-            this.buttonPath.Click += new System.EventHandler(this.buttonPath_Click);
-            // 
-            // buttonTravel
-            // 
-            this.buttonTravel.Location = new System.Drawing.Point(3, 484);
-            this.buttonTravel.Name = "buttonTravel";
-            this.buttonTravel.Size = new System.Drawing.Size(197, 59);
-            this.buttonTravel.TabIndex = 2;
-            this.buttonTravel.Text = "Перемещение";
-            this.buttonTravel.UseVisualStyleBackColor = true;
-            this.buttonTravel.Click += new System.EventHandler(this.buttonTravel_Click);
-            // 
-            // labelRole
-            // 
-            this.labelRole.AutoSize = true;
-            this.labelRole.Location = new System.Drawing.Point(3, 7);
-            this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(42, 16);
-            this.labelRole.TabIndex = 2;
-            this.labelRole.Text = "Роль ";
+            this.buttonValue.Location = new System.Drawing.Point(3, 248);
+            this.buttonValue.Name = "buttonValue";
+            this.buttonValue.Size = new System.Drawing.Size(133, 43);
+            this.buttonValue.TabIndex = 12;
+            this.buttonValue.Text = "Свойств_знач";
+            this.buttonValue.UseVisualStyleBackColor = true;
+            this.buttonValue.Click += new System.EventHandler(this.buttonChar_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelRole);
-            this.panel1.Location = new System.Drawing.Point(13, 2);
+            this.panel1.Controls.Add(this.textBoxInfo);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(12, 279);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(197, 31);
-            this.panel1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(618, 206);
+            this.panel1.TabIndex = 11;
             // 
-            // flowLayoutPanelEverything
+            // textBoxInfo
             // 
-            this.flowLayoutPanelEverything.Controls.Add(this.panelBoss);
-            this.flowLayoutPanelEverything.Controls.Add(this.panelStocks);
-            this.flowLayoutPanelEverything.Controls.Add(this.panelLogist);
-            this.flowLayoutPanelEverything.Controls.Add(this.panelBuyer);
-            this.flowLayoutPanelEverything.Controls.Add(this.panelSeller);
-            this.flowLayoutPanelEverything.Location = new System.Drawing.Point(219, 36);
-            this.flowLayoutPanelEverything.Name = "flowLayoutPanelEverything";
-            this.flowLayoutPanelEverything.Size = new System.Drawing.Size(908, 68);
-            this.flowLayoutPanelEverything.TabIndex = 4;
+            this.textBoxInfo.Location = new System.Drawing.Point(6, 26);
+            this.textBoxInfo.Name = "textBoxInfo";
+            this.textBoxInfo.Size = new System.Drawing.Size(594, 162);
+            this.textBoxInfo.TabIndex = 4;
+            this.textBoxInfo.Text = "";
             // 
-            // panelBoss
+            // imageList1
             // 
-            this.panelBoss.Controls.Add(this.buttonUpdateOrder);
-            this.panelBoss.Location = new System.Drawing.Point(3, 3);
-            this.panelBoss.Name = "panelBoss";
-            this.panelBoss.Size = new System.Drawing.Size(175, 55);
-            this.panelBoss.TabIndex = 6;
-            // 
-            // buttonUpdateOrder
-            // 
-            this.buttonUpdateOrder.Location = new System.Drawing.Point(3, 3);
-            this.buttonUpdateOrder.Name = "buttonUpdateOrder";
-            this.buttonUpdateOrder.Size = new System.Drawing.Size(172, 43);
-            this.buttonUpdateOrder.TabIndex = 1;
-            this.buttonUpdateOrder.Text = "Обновить статус заказа";
-            this.buttonUpdateOrder.UseVisualStyleBackColor = true;
-            this.buttonUpdateOrder.Click += new System.EventHandler(this.buttonUpdateOrder_Click);
-            // 
-            // panelStocks
-            // 
-            this.panelStocks.Controls.Add(this.buttonTakeBaggage);
-            this.panelStocks.Controls.Add(this.buttonSendBaggage);
-            this.panelStocks.Location = new System.Drawing.Point(184, 3);
-            this.panelStocks.Name = "panelStocks";
-            this.panelStocks.Size = new System.Drawing.Size(182, 55);
-            this.panelStocks.TabIndex = 5;
-            // 
-            // buttonTakeBaggage
-            // 
-            this.buttonTakeBaggage.Location = new System.Drawing.Point(3, 3);
-            this.buttonTakeBaggage.Name = "buttonTakeBaggage";
-            this.buttonTakeBaggage.Size = new System.Drawing.Size(86, 42);
-            this.buttonTakeBaggage.TabIndex = 0;
-            this.buttonTakeBaggage.Text = "Прием груза";
-            this.buttonTakeBaggage.UseVisualStyleBackColor = true;
-            this.buttonTakeBaggage.Click += new System.EventHandler(this.buttonTakeBaggage_Click);
-            // 
-            // buttonSendBaggage
-            // 
-            this.buttonSendBaggage.Location = new System.Drawing.Point(95, 3);
-            this.buttonSendBaggage.Name = "buttonSendBaggage";
-            this.buttonSendBaggage.Size = new System.Drawing.Size(83, 43);
-            this.buttonSendBaggage.TabIndex = 1;
-            this.buttonSendBaggage.Text = "Отправка груза";
-            this.buttonSendBaggage.UseVisualStyleBackColor = true;
-            this.buttonSendBaggage.Click += new System.EventHandler(this.buttonSendBaggage_Click);
-            // 
-            // panelLogist
-            // 
-            this.panelLogist.Controls.Add(this.buttonAddPath);
-            this.panelLogist.Controls.Add(this.buttonAddDeliver);
-            this.panelLogist.Location = new System.Drawing.Point(372, 3);
-            this.panelLogist.Name = "panelLogist";
-            this.panelLogist.Size = new System.Drawing.Size(316, 55);
-            this.panelLogist.TabIndex = 7;
-            // 
-            // buttonAddPath
-            // 
-            this.buttonAddPath.Location = new System.Drawing.Point(3, 3);
-            this.buttonAddPath.Name = "buttonAddPath";
-            this.buttonAddPath.Size = new System.Drawing.Size(133, 43);
-            this.buttonAddPath.TabIndex = 8;
-            this.buttonAddPath.Text = "Создать маршрут";
-            this.buttonAddPath.UseVisualStyleBackColor = true;
-            this.buttonAddPath.Click += new System.EventHandler(this.buttonAddPath_Click);
-            // 
-            // buttonAddDeliver
-            // 
-            this.buttonAddDeliver.Location = new System.Drawing.Point(142, 3);
-            this.buttonAddDeliver.Name = "buttonAddDeliver";
-            this.buttonAddDeliver.Size = new System.Drawing.Size(169, 43);
-            this.buttonAddDeliver.TabIndex = 9;
-            this.buttonAddDeliver.Text = "Сформировать пер-ние";
-            this.buttonAddDeliver.UseVisualStyleBackColor = true;
-            this.buttonAddDeliver.Click += new System.EventHandler(this.buttonAddDeliver_Click);
-            // 
-            // panelBuyer
-            // 
-            this.panelBuyer.Controls.Add(this.buttonCreateSupply);
-            this.panelBuyer.Location = new System.Drawing.Point(694, 3);
-            this.panelBuyer.Name = "panelBuyer";
-            this.panelBuyer.Size = new System.Drawing.Size(98, 55);
-            this.panelBuyer.TabIndex = 8;
-            // 
-            // buttonCreateSupply
-            // 
-            this.buttonCreateSupply.Location = new System.Drawing.Point(3, 3);
-            this.buttonCreateSupply.Name = "buttonCreateSupply";
-            this.buttonCreateSupply.Size = new System.Drawing.Size(95, 43);
-            this.buttonCreateSupply.TabIndex = 10;
-            this.buttonCreateSupply.Text = "Оформить поставку";
-            this.buttonCreateSupply.UseVisualStyleBackColor = true;
-            this.buttonCreateSupply.Click += new System.EventHandler(this.buttonCreateSupply_Click);
-            // 
-            // panelSeller
-            // 
-            this.panelSeller.Controls.Add(this.buttonCreateOrder);
-            this.panelSeller.Location = new System.Drawing.Point(798, 3);
-            this.panelSeller.Name = "panelSeller";
-            this.panelSeller.Size = new System.Drawing.Size(92, 55);
-            this.panelSeller.TabIndex = 11;
-            // 
-            // buttonCreateOrder
-            // 
-            this.buttonCreateOrder.Location = new System.Drawing.Point(3, 3);
-            this.buttonCreateOrder.Name = "buttonCreateOrder";
-            this.buttonCreateOrder.Size = new System.Drawing.Size(85, 43);
-            this.buttonCreateOrder.TabIndex = 10;
-            this.buttonCreateOrder.Text = "Оформить заказ";
-            this.buttonCreateOrder.UseVisualStyleBackColor = true;
-            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 598);
-            this.Controls.Add(this.flowLayoutPanelEverything);
+            this.ClientSize = new System.Drawing.Size(1182, 598);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.adminPanel);
+            this.Controls.Add(this.photoPanel);
+            this.Controls.Add(this.traitsPanel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.traitsPanel.ResumeLayout(false);
+            this.traitsPanel.PerformLayout();
+            this.photoPanel.ResumeLayout(false);
+            this.photoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExtractor)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.adminPanel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.flowLayoutPanelEverything.ResumeLayout(false);
-            this.panelBoss.ResumeLayout(false);
-            this.panelStocks.ResumeLayout(false);
-            this.panelLogist.ResumeLayout(false);
-            this.panelBuyer.ResumeLayout(false);
-            this.panelSeller.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel traitsPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel photoPanel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem filterButton;
+        private System.Windows.Forms.ToolStripTextBox searchTextBox;
+        private System.Windows.Forms.FlowLayoutPanel adminPanel;
+        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button buttonPath;
-        private System.Windows.Forms.Button buttonMaterial;
-        private System.Windows.Forms.Button buttonTravel;
-        private System.Windows.Forms.Button buttonDeliveries;
-        private System.Windows.Forms.Button buttonOrder;
-        private System.Windows.Forms.Button buttonOutput;
-        private System.Windows.Forms.Button buttonStocks;
-        private System.Windows.Forms.Button buttonStorage;
-        private System.Windows.Forms.Button buttonOffs;
-        private System.Windows.Forms.Button buttonStage;
-        private System.Windows.Forms.Label labelRole;
+        private System.Windows.Forms.Button buttonExtractor;
+        private System.Windows.Forms.Button buttonTraits;
+        private System.Windows.Forms.Button buttonCreator;
+        private System.Windows.Forms.Button buttonType;
+        private System.Windows.Forms.RichTextBox textBoxProp;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelEverything;
-        private System.Windows.Forms.Button buttonTakeBaggage;
-        private System.Windows.Forms.Button buttonUpdateOrder;
-        private System.Windows.Forms.FlowLayoutPanel panelBoss;
-        private System.Windows.Forms.FlowLayoutPanel panelStocks;
-        private System.Windows.Forms.FlowLayoutPanel panelLogist;
-        private System.Windows.Forms.Button buttonAddPath;
-        private System.Windows.Forms.Button buttonAddDeliver;
-        private System.Windows.Forms.FlowLayoutPanel panelBuyer;
-        private System.Windows.Forms.Button buttonCreateSupply;
-        private System.Windows.Forms.FlowLayoutPanel panelSeller;
-        private System.Windows.Forms.Button buttonCreateOrder;
-        private System.Windows.Forms.Button buttonSendBaggage;
+        private System.Windows.Forms.RichTextBox textBoxInfo;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button buttonSubType;
+        private System.Windows.Forms.PictureBox pictureBoxExtractor;
+        private System.Windows.Forms.Button buttonValue;
     }
 }
 

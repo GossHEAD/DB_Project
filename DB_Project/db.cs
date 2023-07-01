@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿//using Microsoft.Data.Sqlite;
+using System.Data.SQLite;
 using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections;
@@ -9,16 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace DB_Project
 {
     public class db
     {
-        MySqlConnection connection = new MySqlConnection("server = localhost; port = 3306; username = root; password = root; database = courseproject_db;");
+        SQLiteConnection connection = new SQLiteConnection("Data Source=practise_bd_re.db");
         public void OpenConnection()
         {
             try
             {
-                if (connection.State == System.Data.ConnectionState.Closed)
+                if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
                 }
@@ -30,16 +32,17 @@ namespace DB_Project
         }
         public void CloseConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Open)
-            {
-                connection.Close();
-            }
+            //if (connection.State == ConnectionState.Open)
+            //{
+            //    connection.Close();
+            //}
         }
-        public MySqlConnection getConnection()
+        public SQLiteConnection getConnection()
         {
             return connection;
         }
     }
+    /*
     public class Role: db
     {
         db a = new db();
@@ -59,4 +62,5 @@ namespace DB_Project
             }
         }
     }
+    */
 }

@@ -65,7 +65,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Пароль";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // buttonLogin
             // 
@@ -122,7 +121,6 @@
             this.label1.Size = new System.Drawing.Size(198, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Авторизация";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
