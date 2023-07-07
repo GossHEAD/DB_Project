@@ -61,23 +61,23 @@
     <Compile Include="Forms\AdminPanel\NewExtractorForm.Designer.cs">
       <DependentUpon>NewExtractorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FilterWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FilterWindow.Designer.cs">
       <DependentUpon>FilterWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainFrom.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainFrom.Designer.cs">
-      <DependentUpon>MainFrom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminPanel\UpdateForm.cs">
       <SubType>Form</SubType>
@@ -91,14 +91,14 @@
     <EmbeddedResource Include="Forms\AdminPanel\NewExtractorForm.resx">
       <DependentUpon>NewExtractorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FilterWindow.resx">
       <DependentUpon>FilterWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainFrom.resx">
-      <DependentUpon>MainFrom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminPanel\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>

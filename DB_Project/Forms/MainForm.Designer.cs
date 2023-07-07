@@ -1,6 +1,6 @@
 ﻿namespace DB_Project
 {
-    partial class MainFrom
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrom));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.dataExtractor = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.traitsPanel = new System.Windows.Forms.Panel();
@@ -318,7 +318,7 @@
             this.panel2.Size = new System.Drawing.Size(354, 268);
             this.panel2.TabIndex = 15;
             // 
-            // MainFrom
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -332,9 +332,9 @@
             this.Controls.Add(this.dataExtractor);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "MainFrom";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "Главная";
             this.Activated += new System.EventHandler(this.MainFrom_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);

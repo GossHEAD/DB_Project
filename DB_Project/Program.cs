@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DB_Project.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +17,8 @@ namespace DB_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
-            Application.Run(new MainFrom());
+            Application.Run(new AuthorizationForm());
+            //Application.Run(new MainForm());
         }
     }
 }

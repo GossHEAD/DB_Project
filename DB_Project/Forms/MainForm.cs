@@ -20,7 +20,7 @@ using DB_Project.Forms.AdminPanel;
 
 namespace DB_Project
 {
-    public partial class MainFrom : Form
+    public partial class MainForm : Form
     {
         db dataBase = new db();
 
@@ -28,14 +28,14 @@ namespace DB_Project
         //public int role_ID;
 
         //Конструкторы
-        public MainFrom()
+        public MainForm()
         {
             InitializeComponent();
             dataExtractor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
 
-        public MainFrom(bool isAdmin)
+        public MainForm(bool isAdmin)
         {
             InitializeComponent();
             if (isAdmin == false)
@@ -158,7 +158,15 @@ namespace DB_Project
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            FormCollection forms = Application.OpenForms;
+            for(int i = 0; i < forms.Count; i++)
+            {
+                if (forms[i].Visible)
+                    forms[i].Close();
+                else
+                    forms[i].Show();
+
+            }       
         }
 
         //Функция, которая собирает свойства передаваемого id экстрактора и записывает в textbox
