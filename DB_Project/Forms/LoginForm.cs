@@ -31,8 +31,8 @@ namespace DB_Project
             {
                 this.Hide();
                 bool a = Autorization(loginUser, passUser);
-                //Form1 form1 = new Form1(role_id);
-                Form1 form1 = new Form1(a);
+                //MainForm form1 = new MainForm(role_id);
+                MainFrom form1 = new MainFrom(a);
                 form1.Show();
             }          
                 
