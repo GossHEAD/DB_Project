@@ -34,5 +34,13 @@ namespace DB_Project.Forms
             }
             return false;
         }
+
+        private void loginBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.LineFeed)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

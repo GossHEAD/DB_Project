@@ -86,6 +86,7 @@
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(266, 52);
             this.loginBox.TabIndex = 0;
+            this.loginBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loginBox_KeyPress);
             // 
             // AuthorizationForm
             // 
