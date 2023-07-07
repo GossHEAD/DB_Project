@@ -90,6 +90,9 @@ namespace DB_Project.Forms
             cmd = $"SELECT ID_TypeOfMixing FROM Properties WHERE ID_Extractor = {id}";
             selectIndex(typeOfMixingBox, Int32.Parse(dataBase.GetFirstValue(cmd)));
 
+            cmd = $"SELECT pathToPhoto FROM Extractor WHERE ID_Extractor = {id}";
+            pathToFileBox.Text = dataBase.GetFirstValue(cmd);
+
         }
 
         void selectIndex(ComboBox comboBox, int id)
@@ -137,7 +140,8 @@ namespace DB_Project.Forms
             string cmd = $"UPDATE Extractor SET Name = '{nameBox.Text}'," +
                 $" Price = {priceBox.Text}, ID_Manufacturer = {getIdFromMyItem(manufactureBox)}," +
                 $" ID_Subtype = {getIdFromMyItem(subtypeBox)}," +
-                $" Info = '{informationTextBox.Text}' " +
+                $" Info = '{informationTextBox.Text}', " +
+                $" pathToPhoto = '{pathToFileBox.Text}'" +
                 $"WHERE ID_Extractor = {idBox.Text}";
             dataBase.executeCmd(cmd);
             cmd = "UPDATE Properties SET " +
@@ -176,6 +180,17 @@ namespace DB_Project.Forms
         private void escapeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pathToFileBox_DoubleClick(object sender, EventArgs e)
+        {
+            openFileDialog.ShowDialog();
+            string path = openFileDialog.FileName;
+            if (path == "")
+            {
+                pathToFileBox.Text = "DEFAULT";
+
+            }
         }
     }
 }

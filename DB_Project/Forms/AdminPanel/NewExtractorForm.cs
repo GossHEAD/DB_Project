@@ -81,8 +81,10 @@ namespace DB_Project.Forms.AdminPanel
                 return;
             }
 
-            string cmd = "INSERT INTO Extractor(Name, Price, ID_Manufacturer, ID_Subtype, Info) " +
-                        $"VALUES ('{nameBox.Text}', {price}, {getIdFromMyItem(manufactureBox)}, {getIdFromMyItem(subtypeBox)}, '{informationTextBox.Text}')";
+            string cmd = "INSERT INTO Extractor(Name, Price, ID_Manufacturer, ID_Subtype, Info, pathToPhoto) " +
+                        $"VALUES ('{nameBox.Text}', {price}, {getIdFromMyItem(manufactureBox)}, " +
+                        $"{getIdFromMyItem(subtypeBox)}, '{informationTextBox.Text}', " +
+                        $"'{pathToFileBox.Text}')";
             dataBase.executeCmd(cmd);
             cmd = "SELECT ID_Extractor FROM Extractor " +
                 "WHERE ID_Extractor NOT IN (SELECT Properties.ID_Extractor FROM Properties)";
@@ -101,5 +103,18 @@ namespace DB_Project.Forms.AdminPanel
             MessageBox.Show("Данные введены.");
             this.Close();
         }
+
+        private void pathToFileBox_DoubleClick(object sender, EventArgs e)
+        {
+            openFileDialog.ShowDialog();
+            string path = openFileDialog.FileName;
+            if(path == "")
+            {
+                pathToFileBox.Text = "DEFAULT";
+
+            }
+        }
+
+
     }
 }

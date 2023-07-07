@@ -225,12 +225,22 @@ namespace DB_Project
                 catch (Exception ex)
                 {
                     MessageBox.Show("Ошибка загрузки изображения: " + ex.Message);
+
                 }
             }
             else
             {
-                pictureBoxExtractor.Image = null;
-                MessageBox.Show("Файл изображения не найден.");
+                try
+                {
+                    Image image = Image.FromFile("../../DataBase/Photo/no_photo.png");
+                    pictureBoxExtractor.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBoxExtractor.Image = image;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Файл изображения не найден.");
+
+                }
             }
         }
         //Получение id выбранного в таблице экстрактора
@@ -411,6 +421,12 @@ namespace DB_Project
             {
                 MessageBox.Show("Ошибка: " + ex.Message);
             }
+        }
+
+        private void AboutProgrammMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutProgramForm form = new AboutProgramForm();
+            form.Show();
         }
     }
 }

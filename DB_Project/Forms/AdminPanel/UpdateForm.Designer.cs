@@ -61,15 +61,20 @@
             this.efficiencyBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.informationLabel = new System.Windows.Forms.Label();
-            this.escapeButton = new System.Windows.Forms.Button();
             this.informationTextBox = new System.Windows.Forms.RichTextBox();
+            this.escapeButton = new System.Windows.Forms.Button();
             this.IDlabel = new System.Windows.Forms.Label();
             this.idBox = new System.Windows.Forms.TextBox();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.filePathLabel = new System.Windows.Forms.Label();
+            this.pathToFileBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // updateButton
@@ -314,6 +319,8 @@
             this.flowLayoutPanel3.Controls.Add(this.caseWidthBox);
             this.flowLayoutPanel3.Controls.Add(this.efficiencyLabel);
             this.flowLayoutPanel3.Controls.Add(this.efficiencyBox);
+            this.flowLayoutPanel3.Controls.Add(this.filePathLabel);
+            this.flowLayoutPanel3.Controls.Add(this.pathToFileBox);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(737, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -387,6 +394,14 @@
             this.informationLabel.TabIndex = 5;
             this.informationLabel.Text = "Описание";
             // 
+            // informationTextBox
+            // 
+            this.informationTextBox.Location = new System.Drawing.Point(3, 35);
+            this.informationTextBox.Name = "informationTextBox";
+            this.informationTextBox.Size = new System.Drawing.Size(312, 478);
+            this.informationTextBox.TabIndex = 7;
+            this.informationTextBox.Text = "";
+            // 
             // escapeButton
             // 
             this.escapeButton.Location = new System.Drawing.Point(27, 689);
@@ -396,14 +411,6 @@
             this.escapeButton.Text = "Назад";
             this.escapeButton.UseVisualStyleBackColor = true;
             this.escapeButton.Click += new System.EventHandler(this.escapeButton_Click);
-            // 
-            // informationTextBox
-            // 
-            this.informationTextBox.Location = new System.Drawing.Point(3, 35);
-            this.informationTextBox.Name = "informationTextBox";
-            this.informationTextBox.Size = new System.Drawing.Size(312, 478);
-            this.informationTextBox.TabIndex = 7;
-            this.informationTextBox.Text = "";
             // 
             // IDlabel
             // 
@@ -421,6 +428,36 @@
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(303, 38);
             this.idBox.TabIndex = 5;
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "../../DataBase/Photo/no_photo.png";
+            this.openFileDialog.Filter = "\"Image File(*.BMP;*.JPG;*.PNG;*.JPEG)|)*.BMP;*.JPG;*.PNG;*.JPEG\"";
+            this.openFileDialog.InitialDirectory = "../../../";
+            this.openFileDialog.Title = "Выберите картинку";
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // filePathLabel
+            // 
+            this.filePathLabel.AutoSize = true;
+            this.filePathLabel.Location = new System.Drawing.Point(3, 228);
+            this.filePathLabel.Name = "filePathLabel";
+            this.filePathLabel.Size = new System.Drawing.Size(225, 32);
+            this.filePathLabel.TabIndex = 6;
+            this.filePathLabel.Text = "Путь к картинке";
+            // 
+            // pathToFileBox
+            // 
+            this.pathToFileBox.Location = new System.Drawing.Point(3, 263);
+            this.pathToFileBox.Name = "pathToFileBox";
+            this.pathToFileBox.ReadOnly = true;
+            this.pathToFileBox.Size = new System.Drawing.Size(347, 38);
+            this.pathToFileBox.TabIndex = 7;
+            this.pathToFileBox.DoubleClick += new System.EventHandler(this.pathToFileBox_DoubleClick);
             // 
             // UpdateForm
             // 
@@ -444,6 +481,7 @@
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,5 +526,9 @@
         private System.Windows.Forms.RichTextBox informationTextBox;
         private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.TextBox idBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Label filePathLabel;
+        private System.Windows.Forms.TextBox pathToFileBox;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }

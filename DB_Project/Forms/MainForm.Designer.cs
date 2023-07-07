@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.dataExtractor = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.traitsPanel = new System.Windows.Forms.Panel();
@@ -54,6 +53,8 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.filterButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.AboutProgrammMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataExtractor)).BeginInit();
             this.traitsPanel.SuspendLayout();
             this.photoPanel.SuspendLayout();
@@ -62,6 +63,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataExtractor
@@ -133,7 +135,6 @@
             // 
             // pictureBoxExtractor
             // 
-            this.pictureBoxExtractor.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxExtractor.Image")));
             this.pictureBoxExtractor.Location = new System.Drawing.Point(6, 59);
             this.pictureBoxExtractor.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBoxExtractor.Name = "pictureBoxExtractor";
@@ -264,6 +265,7 @@
             // 
             // textBoxInfo
             // 
+            this.textBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxInfo.Location = new System.Drawing.Point(12, 50);
             this.textBoxInfo.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxInfo.Name = "textBoxInfo";
@@ -318,6 +320,25 @@
             this.panel2.Size = new System.Drawing.Size(354, 268);
             this.panel2.TabIndex = 15;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AboutProgrammMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(2273, 60);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // AboutProgrammMenuItem
+            // 
+            this.AboutProgrammMenuItem.Name = "AboutProgrammMenuItem";
+            this.AboutProgrammMenuItem.Size = new System.Drawing.Size(228, 50);
+            this.AboutProgrammMenuItem.Text = "О программе";
+            this.AboutProgrammMenuItem.Click += new System.EventHandler(this.AboutProgrammMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -330,7 +351,9 @@
             this.Controls.Add(this.traitsPanel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataExtractor);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -350,7 +373,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -380,6 +406,8 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button filterButton;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem AboutProgrammMenuItem;
     }
 }
 
