@@ -136,6 +136,10 @@ namespace DB_Project.Forms
 
         private void updateButton_Click(object sender, EventArgs e)
         {
+            if (priceBox.Text == "")
+            {
+                priceBox.Text = "NULL";
+            }
             db dataBase = new db();
             string cmd = $"UPDATE Extractor SET Name = '{nameBox.Text}'," +
                 $" Price = {priceBox.Text}, ID_Manufacturer = {getIdFromMyItem(manufactureBox)}," +
@@ -189,8 +193,9 @@ namespace DB_Project.Forms
             if (path == "")
             {
                 pathToFileBox.Text = "DEFAULT";
-
+                return;
             }
+            pathToFileBox.Text = path;
         }
     }
 }
